@@ -1,0 +1,12 @@
+import plotly.express as px
+import sqlite3
+import pandas as pd
+
+
+def charts():
+    connection = sqlite3.connect("temperatur.db", check_same_thread=False)
+    cursor = connection.cursor()
+    df = pd.DataFrame(cursor.execute("SELECT date, temp FROM daten").fetchall(), columns=['Datum', 'Temperatur'])
+
+    fig = px.line(df, y='Temperatur', x='Datum', title='Temperatur und Feuchtigkeit', hover_name='Temperatur')
+    fig.write_html('C:/Users/Philip/Downloads/Desktop/Script/static/chart.html', auto_open=False)
