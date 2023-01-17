@@ -8,5 +8,6 @@ def charts():
     cursor = connection.cursor()
     df = pd.DataFrame(cursor.execute("SELECT date, temp, hum FROM daten").fetchall(), columns=['Datum', 'Temperatur', 'Hum'])
    
-    fig = px.line(df, y=['Temperatur', 'Hum'], x='Datum', title='Temperatur und Feuchtigkeit', hover_name='Temperatur')
+    fig = px.line(df, y='Temperatur', x='Datum', title='Temperatur und Feuchtigkeit', hover_name='Temperatur')
+    fig.add_scatter(y=df['Hum'], x=df['Datum'])
     fig.write_html('static/chart.html', auto_open=False)

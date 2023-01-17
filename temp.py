@@ -17,7 +17,7 @@ GPIO.cleanup()
 try:
     while True:
         time_now = datetime.datetime.now()
-        instance = dht11.DHT11(pin = 4)
+        instance = dht11.DHT11(pin=4)
         result = instance.read()
         while not result.is_valid():  # read until valid values
             result = instance.read()
