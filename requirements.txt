@@ -13,7 +13,7 @@ numpy==1.23.5
 pandas==1.5.2
 pefile==2022.5.30
 plotly==5.11.0
-prettytable==3.3.0
+prettytable==3.6.0
 psutil==5.9.4
 pyinstaller==5.2
 pyinstaller-hooks-contrib==2022.8
