@@ -1,4 +1,4 @@
-﻿altgraph==0.17.3
+altgraph==0.17.3
 certifi==2022.12.7
 charset-normalizer==3.1.0
 click==8.1.3
@@ -13,7 +13,7 @@ numpy==1.24.2
 pandas==1.5.3
 pefile==2023.2.7
 plotly==5.13.1
-prettytable==3.6.0
+prettytable==3.7.0
 psutil==5.9.4
 pyinstaller==5.9.0
 pyinstaller-hooks-contrib==2023.1
