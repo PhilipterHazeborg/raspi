@@ -16,7 +16,7 @@ plotly==5.14.1
 prettytable==3.7.0
 psutil==5.9.5
 pyinstaller==5.10.1
-pyinstaller-hooks-contrib==2023.2
+pyinstaller-hooks-contrib==2023.3
 python-dateutil==2.8.2
 pytz==2023.3
 pywin32-ctypes==0.2.0
