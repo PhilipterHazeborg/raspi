@@ -6,8 +6,9 @@
 | ------------ | ------------------ |
 | 0.6.x-beta   | :x:                |
 | v1.0.0       | :x:                |
-| v1.0.1       | :warning:          |
-| v1.0.2       | :white_check_mark: |
+| v1.0.1       | :x:                |
+| v1.0.2       | :x:                |
+| v1.1.0       | :white_check_mark: |
 ## Reporting a Vulnerability
 
 Please open an Issue
