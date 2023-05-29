@@ -10,7 +10,7 @@ itsdangerous==2.1.2
 Jinja2==3.1.2
 MarkupSafe==2.1.2
 numpy==1.24.3
-pandas==2.0.1
+pandas==2.0.2
 pefile==2023.2.7
 plotly==5.14.1
 prettytable==3.7.0
