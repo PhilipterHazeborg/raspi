@@ -15,4 +15,5 @@ def hello_world():
 
 if __name__ == '__main__':
     os.makedirs(os.path.dirname(DIR), exist_ok=True)
+    charts.init()
     app.run(host=IP, port=PORT)

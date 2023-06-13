@@ -4,6 +4,9 @@ import time
 import sqlite3
 import datetime
 
+import charts
+
+charts.init()
 connection = sqlite3.connect("temperatur.db")
 cursor = connection.cursor()
 

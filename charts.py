@@ -8,6 +8,7 @@ def init():
     connection = sqlite3.connect("temperatur.db", check_same_thread=False)
     cursor = connection.cursor()
     print(cursor.execute("CREATE TABLE IF NOT EXISTS daten(date TEXT, temp REAL, hum REAL)").fetchall())
+    connection.commit()
 
 
 def charts():
