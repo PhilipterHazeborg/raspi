@@ -4,6 +4,12 @@ import sqlite3
 import pandas as pd
 
 
+def init():
+    connection = sqlite3.connect("temperatur.db", check_same_thread=False)
+    cursor = connection.cursor()
+    print(cursor.execute("CREATE TABLE IF NOT EXISTS daten(date TEXT, temp REAL, hum REAL)").fetchall())
+
+
 def charts():
     connection = sqlite3.connect("temperatur.db", check_same_thread=False)
     cursor = connection.cursor()

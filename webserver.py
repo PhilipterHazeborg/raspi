@@ -1,11 +1,10 @@
 from flask import Flask, send_file
-import sqlite3
 import charts
+import os
 
-connection = sqlite3.connect("temperatur.db", check_same_thread=False)
-cursor = connection.cursor()
-
+DIR = "static/"
 app = Flask(__name__)
+IP, PORT = '0.0.0.0', 8000
 
 
 @app.route('/')
@@ -15,4 +14,5 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='8000')
+    os.makedirs(os.path.dirname(DIR), exist_ok=True)
+    app.run(host=IP, port=PORT)
