@@ -5,14 +5,14 @@ import pandas as pd
 
 
 def init():
-    connection = sqlite3.connect("temperatur.db", check_same_thread=False)
+    connection = sqlite3.connect("temperatur.db")
     cursor = connection.cursor()
     print(cursor.execute("CREATE TABLE IF NOT EXISTS daten(date TEXT, temp REAL, hum REAL)").fetchall())
     connection.commit()
 
 
 def charts():
-    connection = sqlite3.connect("temperatur.db", check_same_thread=False)
+    connection = sqlite3.connect("temperatur.db")
     cursor = connection.cursor()
     df = pd.DataFrame(cursor.execute("SELECT date, temp, hum FROM daten").fetchall(),
                       columns=['Datum', 'Temperatur', 'Feuchtigkeit'])

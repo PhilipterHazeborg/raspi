@@ -7,8 +7,6 @@ import datetime
 import charts
 
 charts.init()
-connection = sqlite3.connect("temperatur.db")
-cursor = connection.cursor()
 
 
 # initialize GPIO
@@ -19,6 +17,8 @@ GPIO.cleanup()
 
 try:
     while True:
+        connection = sqlite3.connect("temperatur.db")
+        cursor = connection.cursor()
         time_now = datetime.datetime.now()
         instance = dht11.DHT11(pin = 4)
         result = instance.read()
@@ -28,6 +28,7 @@ try:
         print("Humidity: %-3.1f %%" % result.humidity)
         cursor.execute("INSERT INTO daten (date, temp, hum) VALUES (?,?,?)",(time_now, "%3.1f" % result.temperature, "%3.1f" % result.humidity)) 
         connection.commit()
+        connection.close()
         time.sleep(5)
 except KeyboardInterrupt:
     exit(-1)
