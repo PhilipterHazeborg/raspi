@@ -8,7 +8,7 @@ IP, PORT = '0.0.0.0', 8000
 
 
 @app.route('/')
-def hello_world():
+def main():
     charts.charts()
     return send_file('static/chart.html')
 
